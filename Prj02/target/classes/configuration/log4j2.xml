@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ <Configuration>
+	<Appenders>
+		<File name="File1" fileName="target/logs/logSum.log">
+			<PatternLayout>
+				<Pattern>%m%n</Pattern>
+			</PatternLayout>
+		</File>
+		<File name="File2" fileName="target/logs/logNotSum.log">
+			<PatternLayout>
+				<Pattern>%m%n</Pattern>
+			</PatternLayout>
+		</File>
+	</Appenders>
+	<Loggers>
+		<Logger level="info" name="logger1">
+			<AppenderRef ref="File1"/>
+		</Logger>
+		<Logger level="debug" name="logger2">
+			<AppenderRef ref="File2"/>
+		</Logger>
+	</Loggers>
+ </Configuration>
